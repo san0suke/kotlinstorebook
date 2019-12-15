@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerview_books.layoutManager = LinearLayoutManager(this)
 
+//        startActivity(ListClientSalesActivity.newIntent(this, 1))
         BooksProvider().getBookList {
             runOnUiThread {
                 recyclerview_books.adapter = BooksAdapter(it, onItemClick = ::bookClicked)
@@ -28,8 +29,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun bookClicked(book: Book) {
-        val newIntent = BookDetailsActivity.newIntent(this, book)
-
-        startActivity(newIntent)
+        startActivity(BookDetailsActivity.newIntent(this, book))
     }
 }

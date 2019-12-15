@@ -9,7 +9,7 @@
     tools:context=".activity.FininshBuyActivity">
 
     <Button
-        android:id="@+id/clientFinishBuyButton2"
+        android:id="@+id/afterBuyShowSalesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"

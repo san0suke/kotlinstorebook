@@ -11,6 +11,7 @@ import br.com.systemglass.livros.dao.Sale
 import br.com.systemglass.livros.dao.SaleJSON
 import br.com.systemglass.livros.provider.CartProvider
 import br.com.systemglass.livros.provider.SalesProvider
+import kotlinx.android.synthetic.main.activity_fininsh_buy.*
 
 class FininshBuyActivity : AppCompatActivity() {
 
@@ -45,6 +46,14 @@ class FininshBuyActivity : AppCompatActivity() {
 
         var saleJSON = SaleJSON(items = sales, payment = paymentMethod, confirm = false, client = client)
 
-        SalesProvider().sendSale(saleJSON)
+        SalesProvider().sendSale(saleJSON) {
+            setShowSalesButtonClick(client)
+        }
+    }
+
+    private fun setShowSalesButtonClick(client: Client) {
+        afterBuyShowSalesButton.setOnClickListener {
+            startActivity(ListClientSalesActivity.newIntent(this, client.id))
+        }
     }
 }
