@@ -5,11 +5,12 @@ import br.com.systemglass.livros.dao.SaleJSON
 import com.google.gson.GsonBuilder
 
 class SalesProvider {
-    val urlListBooks = Constants.webServiceURL + "/sale/create"
+    val urlCreateSale = Constants.webServiceURL + "/sale/create"
 
     fun sendSale(saleJSON: SaleJSON) {
         val gson = GsonBuilder().create()
         val saleJsonString = gson.toJson(saleJSON)
-        
+        HttpProvider().sendPost(urlCreateSale, saleJsonString) {
+        }
     }
 }
