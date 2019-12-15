@@ -64,12 +64,18 @@ class CartClientActivity : AppCompatActivity() {
                         if (clientComplement != null && clientComplement.trim() != "") {
                             it.address.street += ", $clientComplement"
                         }
+
+                        goToFinishActity(it)
                     } catch (e: Exception) {
                         Toast.makeText(this, R.string.fields_incorrect, Toast.LENGTH_LONG).show()
                     }
                 }
             }
         }
+    }
+
+    private fun goToFinishActity(client: Client) {
+        startActivity(FininshBuyActivity.finishBuyingIntent(this, client))
     }
 
 
