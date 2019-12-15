@@ -27,6 +27,7 @@ class BookDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_details)
+        setTitle(R.string.book_details_title)
 
         book = intent.getSerializableExtra(SELECTED_BOOK) as Book
         book?.let {
@@ -47,7 +48,8 @@ class BookDetailsActivity : AppCompatActivity() {
     private fun buyButtonClick() {
         bookDetailBuyButton.setOnClickListener {
             book?.let {
-
+                val addItemToCartIntent = CartActivity.addItemToCartIntent(this, it)
+                startActivity(addItemToCartIntent)
             }
         }
     }

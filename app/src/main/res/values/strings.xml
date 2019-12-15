@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SystemGlass Livros</string>
+    <string name="book_details_title">Detalhes do livro</string>
+    <string name="cart_title">Carrinho de compras</string>
 </resources>

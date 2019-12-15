@@ -11,7 +11,7 @@
     android:paddingBottom="8dp">
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/cartTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Título"
@@ -24,11 +24,12 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/resumeTextView"
+        android:id="@+id/cartResumeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Resumo"
         android:textColor="#00BFA5"
+        android:textSize="18sp"
         tools:layout_conversion_absoluteHeight="366dp"
         tools:layout_conversion_absoluteWidth="411dp"
         tools:layout_editor_absoluteX="0dp"
