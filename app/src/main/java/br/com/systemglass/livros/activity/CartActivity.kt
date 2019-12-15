@@ -43,7 +43,7 @@ class CartActivity : AppCompatActivity() {
 
     private fun finishBuyButtonClick() {
         finishBuyButton.setOnClickListener {
-
+            startActivity(CartClientActivity.newIntent(this))
         }
     }
 
