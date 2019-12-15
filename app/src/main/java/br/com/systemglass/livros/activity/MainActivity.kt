@@ -1,5 +1,7 @@
 package br.com.systemglass.livros.activity
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun bookClicked(book: Book) {
-        print(book)
+        val newIntent = BookDetailsActivity.newIntent(this, book)
+
+        startActivity(newIntent)
     }
 }
