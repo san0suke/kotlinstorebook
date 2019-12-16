@@ -5,7 +5,7 @@
     <string name="cart_client_title">Informações para entrega</string>
     <string name="finish_buy_title">Compra finalizada</string>
     <string name="buyed_items">Compras realizadas</string>
-    <string name="client_not_found">Cliente não encontrado, digite um email válido</string>
+    <string name="client_not_found">Cliente não encontrado, digite um email cadastrado</string>
     <string name="fields_incorrect">Preencha os campos corretamente</string>
 
     <string-array name="provicies">
