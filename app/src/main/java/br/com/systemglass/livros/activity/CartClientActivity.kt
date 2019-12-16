@@ -76,6 +76,7 @@ class CartClientActivity : AppCompatActivity() {
 
     private fun goToFinishActity(client: Client) {
         startActivity(FininshBuyActivity.finishBuyingIntent(this, client))
+        finish()
     }
 
 

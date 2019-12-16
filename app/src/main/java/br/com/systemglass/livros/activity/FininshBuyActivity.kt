@@ -47,6 +47,7 @@ class FininshBuyActivity : AppCompatActivity() {
         var saleJSON = SaleJSON(items = sales, payment = paymentMethod, confirm = false, client = client)
 
         SalesProvider().sendSale(saleJSON) {
+            CartProvider.clearCartItems()
             setShowSalesButtonClick(client)
         }
     }
@@ -54,6 +55,7 @@ class FininshBuyActivity : AppCompatActivity() {
     private fun setShowSalesButtonClick(client: Client) {
         afterBuyShowSalesButton.setOnClickListener {
             startActivity(ListClientSalesActivity.newIntent(this, client.id))
+            finish()
         }
     }
 }

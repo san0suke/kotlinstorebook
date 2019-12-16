@@ -7,5 +7,9 @@ class CartProvider {
 
     companion object {
         var cartItems: MutableList<Book> = ArrayList<Book>()
+
+        fun clearCartItems() {
+            cartItems = ArrayList<Book>()
+        }
     }
 }
