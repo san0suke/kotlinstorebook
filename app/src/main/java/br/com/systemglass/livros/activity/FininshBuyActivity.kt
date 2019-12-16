@@ -40,7 +40,7 @@ class FininshBuyActivity : AppCompatActivity() {
 
         var sales = mutableListOf<Sale>()
         cartItems.forEachIndexed { index, book ->
-            var sale = Sale(index, book, 1, book.price, null)
+            var sale = Sale(index + 1, book, 1, book.price, null)
             sales.add(sale)
         }
 
